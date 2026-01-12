@@ -1,0 +1,18 @@
+version: 2
+updates:
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Keep Julia dependencies up to date (new feature as of Jan 2025)
+  - package-ecosystem: "julia"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Uncomment to group all julia package updates into a single PR:
+    # groups:
+    #   all-julia-packages:
+    #     patterns:
+    #       - "*"

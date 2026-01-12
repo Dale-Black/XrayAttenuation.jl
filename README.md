@@ -1,6 +1,9 @@
 # XrayAttenuation.jl
 
 [![Build Status](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/Dale-Black/XrayAttenuation.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Dale-Black/XrayAttenuation.jl)
+[![pkgeval](https://juliahub.com/docs/General/XrayAttenuation/stable/pkgeval.svg)](https://juliaci.github.io/NasalDaemon/pkgeval_badges/X/XrayAttenuation.html)
+[![version](https://juliahub.com/docs/General/XrayAttenuation/stable/version.svg)](https://juliahub.com/ui/Packages/General/XrayAttenuation)
 
 X-ray photon attenuation coefficients from the NIST XCOM database with K-edge aware interpolation.
 
