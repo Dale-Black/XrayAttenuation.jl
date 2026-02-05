@@ -314,6 +314,70 @@ import Attenuations as ATT
         @test mu_C < mu_Al < mu_Fe < mu_Pb
     end
 
+    @testset "Fluorescence Data — K-Shell" begin
+        # Data arrays should have 92 entries
+        @test length(XA.K_SHELL_BINDING_ENERGIES_KEV) == 92
+        @test length(XA.K_FLUORESCENCE_YIELDS) == 92
+        @test length(XA.K_ALPHA1_ENERGIES_KEV) == 92
+
+        # Binding energies should increase monotonically with Z
+        for Z in 2:92
+            @test XA.K_SHELL_BINDING_ENERGIES_KEV[Z] > XA.K_SHELL_BINDING_ENERGIES_KEV[Z-1]
+        end
+
+        # Fluorescence yields should increase monotonically with Z (for Z >= 6)
+        for Z in 7:92
+            @test XA.K_FLUORESCENCE_YIELDS[Z] >= XA.K_FLUORESCENCE_YIELDS[Z-1]
+        end
+
+        # Fluorescence yields should be in [0, 1]
+        @test all(0.0 .<= XA.K_FLUORESCENCE_YIELDS .<= 1.0)
+
+        # K-alpha energies should increase with Z (for Z >= 4)
+        for Z in 5:92
+            @test XA.K_ALPHA1_ENERGIES_KEV[Z] > XA.K_ALPHA1_ENERGIES_KEV[Z-1]
+        end
+
+        # K-alpha energy should be less than K-binding energy
+        for Z in 11:92
+            @test XA.K_ALPHA1_ENERGIES_KEV[Z] < XA.K_SHELL_BINDING_ENERGIES_KEV[Z]
+        end
+
+        # Spot checks — Cu (Z=29)
+        @test isapprox(XA.k_binding_energy(29), 8.979, atol=0.01)
+        @test isapprox(XA.k_alpha_energy(29), 8.048, atol=0.01)
+        @test isapprox(XA.k_fluorescence_yield(29), 0.441, atol=0.01)
+
+        # I (Z=53)
+        @test isapprox(XA.k_binding_energy(53), 33.17, atol=0.01)
+        @test isapprox(XA.k_alpha_energy(53), 28.61, atol=0.01)
+        @test isapprox(XA.k_fluorescence_yield(53), 0.882, atol=0.005)
+
+        # Pb (Z=82)
+        @test isapprox(XA.k_binding_energy(82), 88.00, atol=0.01)
+        @test isapprox(XA.k_alpha_energy(82), 74.97, atol=0.01)
+        @test isapprox(XA.k_fluorescence_yield(82), 0.957, atol=0.005)
+
+        # Cd (Z=48) and Te (Z=52) — CdTe detector
+        @test isapprox(XA.k_binding_energy(48), 26.71, atol=0.01)
+        @test isapprox(XA.k_alpha_energy(48), 23.17, atol=0.01)
+        @test isapprox(XA.k_binding_energy(52), 31.81, atol=0.01)
+        @test isapprox(XA.k_alpha_energy(52), 27.47, atol=0.01)
+
+        # K-edge should match XrayAttenuation.jl's K_EDGES_MEV dict
+        # Use 3% tolerance — light elements have small differences between
+        # NIST binding energies and XCOM absorption edge tabulation
+        for Z in keys(XA.K_EDGES_MEV)
+            k_edge_keV = XA.K_EDGES_MEV[Z] * 1000.0
+            @test isapprox(XA.K_SHELL_BINDING_ENERGIES_KEV[Z], k_edge_keV, rtol=0.03)
+        end
+
+        # Function API
+        @test XA.k_binding_energy(26) == XA.K_SHELL_BINDING_ENERGIES_KEV[26]
+        @test XA.k_fluorescence_yield(26) == XA.K_FLUORESCENCE_YIELDS[26]
+        @test XA.k_alpha_energy(26) == XA.K_ALPHA1_ENERGIES_KEV[26]
+    end
+
     @testset "Comprehensive Attenuations.jl Comparison - All 92 Elements" begin
         # Test all 92 elements against Attenuations.jl at 70 keV
         # This is the gold standard comparison
