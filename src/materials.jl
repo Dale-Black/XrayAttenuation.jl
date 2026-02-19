@@ -799,7 +799,7 @@ const Materials = (
     ),
     # Blood with various iodine concentrations
     ncat_blood_with_0_7pct_iodine=Material(
-        "NCAT Blood with 0.7% Iodine",
+        "NCAT Blood with 0.7% Iodine (7.47 mg I/mL)",
         0.54,  # Approximate Z/A ratio
         75.5eV,  # Approximate I value
         1.067472g / cm^3,
@@ -818,7 +818,7 @@ const Materials = (
         ),
     ),
     ncat_blood_with_0_9pct_iodine=Material(
-        "NCAT Blood with 0.9% Iodine",
+        "NCAT Blood with 0.9% Iodine (9.63 mg I/mL)",
         0.54,  # Approximate Z/A ratio
         75.5eV,  # Approximate I value
         1.069627g / cm^3,
@@ -837,7 +837,7 @@ const Materials = (
         ),
     ),
     ncat_blood_with_1_0pct_iodine=Material(
-        "NCAT Blood with 1.0% Iodine",
+        "NCAT Blood with 1.0% Iodine (10.70 mg I/mL)",
         0.54,  # Approximate Z/A ratio
         75.5eV,  # Approximate I value
         1.070707g / cm^3,
@@ -856,7 +856,7 @@ const Materials = (
         ),
     ),
     ncat_blood_with_1_1pct_iodine=Material(
-        "NCAT Blood with 1.1% Iodine",
+        "NCAT Blood with 1.1% Iodine (11.79 mg I/mL)",
         0.54,  # Approximate Z/A ratio
         75.5eV,  # Approximate I value
         1.071789g / cm^3,
@@ -875,7 +875,7 @@ const Materials = (
         ),
     ),
     ncat_blood_with_2_0pct_iodine=Material(
-        "NCAT Blood with 2.0% Iodine",
+        "NCAT Blood with 2.0% Iodine (21.63 mg I/mL)",
         0.54,  # Approximate Z/A ratio
         75.5eV,  # Approximate I value
         1.081632g / cm^3,
@@ -894,7 +894,7 @@ const Materials = (
         ),
     ),
     ncat_blood_with_3_0pct_iodine=Material(
-        "NCAT Blood with 3.0% Iodine",
+        "NCAT Blood with 3.0% Iodine (32.78 mg I/mL)",
         0.53,  # Approximate Z/A ratio
         76.0eV,  # Approximate I value
         1.092784g / cm^3,
