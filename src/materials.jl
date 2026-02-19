@@ -797,6 +797,121 @@ const Materials = (
             26 => 0.001000,
         ),
     ),
+    # Blood with various iodine concentrations
+    ncat_blood_with_0_7pct_iodine=Material(
+        "NCAT Blood with 0.7% Iodine",
+        0.54,  # Approximate Z/A ratio
+        75.5eV,  # Approximate I value
+        1.067472g / cm^3,
+        Dict(
+            1 => 0.101286,
+            6 => 0.109230,
+            7 => 0.032769,
+            8 => 0.739785,
+            11 => 0.000993,
+            15 => 0.000993,
+            16 => 0.001986,
+            17 => 0.002979,
+            19 => 0.001986,
+            26 => 0.000993,
+            53 => 0.007000,
+        ),
+    ),
+    ncat_blood_with_0_9pct_iodine=Material(
+        "NCAT Blood with 0.9% Iodine",
+        0.54,  # Approximate Z/A ratio
+        75.5eV,  # Approximate I value
+        1.069627g / cm^3,
+        Dict(
+            1 => 0.101082,
+            6 => 0.109010,
+            7 => 0.032703,
+            8 => 0.738295,
+            11 => 0.000991,
+            15 => 0.000991,
+            16 => 0.001982,
+            17 => 0.002973,
+            19 => 0.001982,
+            26 => 0.000991,
+            53 => 0.009000,
+        ),
+    ),
+    ncat_blood_with_1_0pct_iodine=Material(
+        "NCAT Blood with 1.0% Iodine",
+        0.54,  # Approximate Z/A ratio
+        75.5eV,  # Approximate I value
+        1.070707g / cm^3,
+        Dict(
+            1 => 0.100980,
+            6 => 0.108900,
+            7 => 0.032670,
+            8 => 0.737550,
+            11 => 0.000990,
+            15 => 0.000990,
+            16 => 0.001980,
+            17 => 0.002970,
+            19 => 0.001980,
+            26 => 0.000990,
+            53 => 0.010000,
+        ),
+    ),
+    ncat_blood_with_1_1pct_iodine=Material(
+        "NCAT Blood with 1.1% Iodine",
+        0.54,  # Approximate Z/A ratio
+        75.5eV,  # Approximate I value
+        1.071789g / cm^3,
+        Dict(
+            1 => 0.100878,
+            6 => 0.108790,
+            7 => 0.032637,
+            8 => 0.736805,
+            11 => 0.000989,
+            15 => 0.000989,
+            16 => 0.001978,
+            17 => 0.002967,
+            19 => 0.001978,
+            26 => 0.000989,
+            53 => 0.011000,
+        ),
+    ),
+    ncat_blood_with_2_0pct_iodine=Material(
+        "NCAT Blood with 2.0% Iodine",
+        0.54,  # Approximate Z/A ratio
+        75.5eV,  # Approximate I value
+        1.081632g / cm^3,
+        Dict(
+            1 => 0.099960,
+            6 => 0.107800,
+            7 => 0.032340,
+            8 => 0.730100,
+            11 => 0.000980,
+            15 => 0.000980,
+            16 => 0.001960,
+            17 => 0.002940,
+            19 => 0.001960,
+            26 => 0.000980,
+            53 => 0.020000,
+        ),
+    ),
+    ncat_blood_with_3_0pct_iodine=Material(
+        "NCAT Blood with 3.0% Iodine",
+        0.53,  # Approximate Z/A ratio
+        76.0eV,  # Approximate I value
+        1.092784g / cm^3,
+        Dict(
+            1 => 0.098940,
+            6 => 0.106700,
+            7 => 0.032010,
+            8 => 0.722650,
+            11 => 0.000970,
+            15 => 0.000970,
+            16 => 0.001940,
+            17 => 0.002910,
+            19 => 0.001940,
+            26 => 0.000970,
+            53 => 0.030000,
+        )
+    ),
     ncat_fat = Material(
         "NCAT Fat/Adipose",
         0.55579,

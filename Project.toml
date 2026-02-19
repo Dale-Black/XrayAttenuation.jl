@@ -1,7 +1,7 @@
 name = "XrayAttenuation"
 uuid = "7811750c-a499-436e-8b04-55fc0593dd37"
 authors = ["Dale Black"]
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 AxisArrays = "39de3d68-74b9-583c-8d2d-e117c070f3a9"
