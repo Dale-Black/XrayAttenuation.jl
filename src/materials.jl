@@ -1450,6 +1450,34 @@ const Materials = (
         Dict(64 => 1.0),
     ),
 
+    # Pure single-material end members for water/lipid/collagen/calcium
+    # multi-material decomposition.  ZA_ratio and I are not used by
+    # `linear_attenuation_coeff` (which only consumes density +
+    # composition), so they're left at 0.0 for these LAC-purposed basis
+    # materials.  Pass real values via the `Material(...)` constructor
+    # if you need them for stopping-power / Bethe-Bloch downstream.
+    basis_lipid = Material(
+        "Basis Lipid",
+        0.0,
+        0.0eV,
+        0.92g / cm^3,
+        Dict(1 => 0.1190, 6 => 0.7720, 8 => 0.1090),
+    ),
+    basis_collagen = Material(
+        "Basis Collagen",
+        0.0,
+        0.0eV,
+        1.26g / cm^3,
+        Dict(1 => 0.0344, 6 => 0.7140, 7 => 0.1827, 8 => 0.0689),
+    ),
+    basis_hydroxyapatite = Material(
+        "Basis Hydroxyapatite",
+        0.0,
+        0.0eV,
+        2.74g / cm^3,
+        Dict(1 => 0.0020, 8 => 0.4140, 15 => 0.1850, 20 => 0.3990),
+    ),
+
     # ========================================================================
     # Calibration Phantom Materials
     # ========================================================================
