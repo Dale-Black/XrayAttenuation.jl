@@ -1,7 +1,6 @@
 # XrayAttenuation.jl
 
 [![Build Status](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![version](https://juliahub.com/docs/General/XrayAttenuation/stable/version.svg)](https://juliahub.com/ui/Packages/General/XrayAttenuation)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20260565.svg)](https://doi.org/10.5281/zenodo.20260565)
 
 
