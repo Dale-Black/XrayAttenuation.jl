@@ -2,6 +2,15 @@
 
 All notable changes to XrayAttenuation.jl will be documented in this file.
 
+## [0.3.1] - 2026-05-17
+
+### Added
+- `CITATION.cff` — GitHub-rendered "Cite this repository" widget + tool-readable citation metadata.
+- `.zenodo.json` — Zenodo deposition metadata (title, description, author + ORCID, keywords, Julia community, NIST XCOM provenance link).
+
+### Non-breaking
+Metadata-only release. No source changes; this version exists solely to mint a Zenodo DOI for the package now that the GitHub ↔ Zenodo webhook is enabled.
+
 ## [0.2.0] - 2025-01-12
 
 ### Added

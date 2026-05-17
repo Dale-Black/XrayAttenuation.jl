@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "XrayAttenuation.jl: NIST XCOM photon attenuation coefficients with K-edge aware interpolation"
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - given-names: Dale
+    family-names: Black
+    affiliation: "University of California, Irvine — Molloi Lab"
+    orcid: "https://orcid.org/0000-0002-9150-9827"
+repository-code: "https://github.com/Dale-Black/XrayAttenuation.jl"
+url: "https://github.com/Dale-Black/XrayAttenuation.jl"
+abstract: >-
+  Julia package providing X-ray photon attenuation coefficients from
+  the NIST XCOM database for all 92 elements, a curated catalog of
+  100+ predefined materials (tissues, bones, polymers, detectors,
+  contrast agents, Gammex 472 CT calibration inserts), and compound /
+  mixture composition by chemical formula or mass fraction. Uses
+  K-edge-aware interpolation for accurate cross-sections near
+  absorption edges and integrates with Unitful.jl for dimensionally
+  correct queries.
+keywords:
+  - X-ray
+  - photon attenuation
+  - NIST XCOM
+  - computed tomography
+  - dual-energy CT
+  - K-edge
+  - Julia
+  - scientific computing
+license: MIT
+version: "0.3.1"

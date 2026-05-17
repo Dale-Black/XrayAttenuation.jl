@@ -1,0 +1,35 @@
+{
+  "title": "XrayAttenuation.jl: NIST XCOM photon attenuation coefficients with K-edge aware interpolation",
+  "description": "Julia package providing X-ray photon attenuation coefficients from the NIST XCOM database for all 92 elements, a curated catalog of 100+ predefined materials (tissues, bones, polymers, detectors, contrast agents, Gammex 472 CT calibration inserts), and compound / mixture composition by chemical formula or mass fraction. Uses K-edge-aware interpolation for accurate cross-sections near absorption edges and integrates with Unitful.jl for dimensionally correct queries.",
+  "creators": [
+    {
+      "name": "Black, Dale",
+      "affiliation": "University of California, Irvine — Molloi Lab",
+      "orcid": "0000-0002-9150-9827"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "X-ray",
+    "photon attenuation",
+    "NIST XCOM",
+    "computed tomography",
+    "dual-energy CT",
+    "K-edge",
+    "Julia",
+    "scientific computing"
+  ],
+  "communities": [
+    { "identifier": "julia" }
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://www.nist.gov/pml/xcom-photon-cross-sections-database",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    }
+  ]
+}
