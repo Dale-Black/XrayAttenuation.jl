@@ -2,9 +2,7 @@
 
 [![Build Status](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Dale-Black/XrayAttenuation.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![version](https://juliahub.com/docs/General/XrayAttenuation/stable/version.svg)](https://juliahub.com/ui/Packages/General/XrayAttenuation)
-<!-- TODO(v0.3.1): replace XXXXXXX with the Zenodo concept DOI minted on the
-     v0.3.1 release (via the GitHub ↔ Zenodo webhook) and remove this comment.
-     [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20260565.svg)](https://doi.org/10.5281/zenodo.20260565)
 
 
 X-ray photon attenuation coefficients from the NIST XCOM database with K-edge aware interpolation.
