@@ -1494,7 +1494,11 @@ const Materials = (
         0.52984,
         70.0eV,
         1.335g / cm^3,
-        Dict(1 => 0.07, 6 => 0.54, 7 => 0.16, 8 => 0.22, 16 => 0.004, 26 => 0.0034),
+        # Mass fractions derived stoichiometrically from the hemoglobin
+        # molecular formula C₂₉₃₂H₄₇₂₄N₈₂₈O₈₄₀S₈Fe₄ using standard atomic
+        # masses (Wikipedia: en.wikipedia.org/wiki/Hemoglobin, which also
+        # confirms Fe ≈ 0.342% and C ≈ 54.3% by mass).
+        Dict(1 => 0.0727, 6 => 0.5377, 7 => 0.1771, 8 => 0.2052, 16 => 0.0039, 26 => 0.0034),
     ),
     basis_iodine_contrast = Material(
         "Basis Iodinated Contrast",
