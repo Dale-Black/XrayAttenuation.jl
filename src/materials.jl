@@ -1450,12 +1450,19 @@ const Materials = (
         Dict(64 => 1.0),
     ),
 
-    # Pure single-material end members for water/lipid/collagen/calcium
-    # multi-material decomposition.  ZA_ratio and I are not used by
-    # `linear_attenuation_coeff` (which only consumes density +
-    # composition), so they're left at 0.0 for these LAC-purposed basis
-    # materials.  Pass real values via the `Material(...)` constructor
-    # if you need them for stopping-power / Bethe-Bloch downstream.
+    # Basis materials for biological-tissue decomposition. Composition and
+    # density follow Paternò et al 2020 (Phys. Med. Biol. 65 245002,
+    # doi:10.1088/1361-6560/aba7d2), Table 1 — the canonical end-members
+    # for x-ray scattering / attenuation models of biological tissue.
+    # Collagen 1.26 g/cm³ and hydroxyapatite 2.74 g/cm³ are the *in-tissue*
+    # effective densities chosen by Paternò so the basis-mixture model
+    # reproduces measured dry-bone density (2.06 g/cm³); these are NOT
+    # the pure-crystalline values (1.35 / 3.16). Use the Paternò figures
+    # for biological-tissue decomposition.
+    # ZA_ratio and I are not used by `linear_attenuation_coeff` (which
+    # consumes density + composition only), so they're left at 0.0 for
+    # the Paternò materials; pass real values via the `Material(...)`
+    # constructor if you need stopping-power / Bethe-Bloch downstream.
     basis_lipid = Material(
         "Basis Lipid",
         0.0,
@@ -1476,6 +1483,25 @@ const Materials = (
         0.0eV,
         2.74g / cm^3,
         Dict(1 => 0.0020, 8 => 0.4140, 15 => 0.1850, 20 => 0.3990),
+    ),
+    # Extensions beyond Paternò's 4-basis fat/water/collagen/HA set, needed
+    # for blood imaging (hemoglobin) and iodinated-contrast CT studies.
+    # Compositions follow ICRU-style tissue tables; densities are the
+    # standard physiological / clinical values (whole-blood hemoglobin
+    # ≈ 1.335 g/cm³; ~300 mgI/mL iodinated contrast ≈ 1.114 g/cm³).
+    basis_hemoglobin = Material(
+        "Basis Hemoglobin",
+        0.52984,
+        70.0eV,
+        1.335g / cm^3,
+        Dict(1 => 0.07, 6 => 0.54, 7 => 0.16, 8 => 0.22, 16 => 0.004, 26 => 0.0034),
+    ),
+    basis_iodine_contrast = Material(
+        "Basis Iodinated Contrast",
+        0.53,
+        75.0eV,
+        1.114g / cm^3,
+        Dict(1 => 0.1041, 8 => 0.833, 19 => 0.0148, 53 => 0.0481),
     ),
 
     # ========================================================================
